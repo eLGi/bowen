@@ -1,3 +1,6 @@
 bowen.controller('MainController', ['$scope', '$location', function($scope, $location) {
-    $scope.zmienna = 'Huj';
+    $scope.feedbacks = [];
+    //On load operations
+
+    //Methods
 }]);

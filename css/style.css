@@ -99,8 +99,13 @@ a {
     text-transform: uppercase;
 }
 
+.links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .oferta-link {
-    display: inline-block;
     width: 150px;
     height: 40px;
     font-size: 16px;
@@ -109,4 +114,87 @@ a {
     border-radius: 20px;
     text-align: center;
     color: white;
+    margin: 0 20px;
 }
+
+.onas-link {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+/* about us section */
+
+.onas-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.onas-wrapper .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    font: normal 300 35px/42px 'Roboto', sans-serif;
+    color: limegreen;
+}
+
+.onas-wrapper .stripe {
+    width: 100px;
+    height: 2px;
+    background-color: limegreen;
+    margin: 30px auto;
+}
+
+.owners-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.owner {
+    width: 48%;
+    height: 400px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.owner-image {
+    width: 150px;
+    height: 50px;
+    background-color: black;
+}
+
+.about-owner {
+    padding: 40px 25px;
+}
+
+.about-owner h4 {
+    color: limegreen;
+    font: normal 300 20px/25px 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.about-owner small {
+    font: normal 300 12px/1.5 'Roboto', sans-serif;
+}
+
+.about-owner p {
+    font: normal 300 15px/1.5 'Roboto', sans-serif;
+}
+
+
+/* Icons section */

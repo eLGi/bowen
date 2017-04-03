@@ -67,7 +67,7 @@ a {
 }
 
 .menu-item:hover {
-    color: lightgreen;
+    color: #17ba00;
 }
 
 
@@ -89,12 +89,12 @@ a {
 
 .title-wrapper .site-title {
     font: normal 300 60px/1.5 'Roboto', sans-serif;
-    color: lightgreen;
+    color: #17ba00;
 }
 
 .site-owners {
     font: normal 300 18px/24px 'Roboto', sans-serif;
-    color: lightgray;
+    color: #404041;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
@@ -110,7 +110,7 @@ a {
     height: 40px;
     font-size: 16px;
     line-height: 40px;
-    background-color: lightgreen;
+    background-color: #17ba00;
     border-radius: 20px;
     text-align: center;
     color: white;
@@ -133,7 +133,7 @@ a {
     width: 100%;
     height: auto;
     background-color: #fff;
-    padding: 40px 0;
+    padding: 0;
 }
 
 .onas-wrapper .container {
@@ -145,13 +145,14 @@ a {
 
 .section-title {
     font: normal 300 35px/42px 'Roboto', sans-serif;
-    color: limegreen;
+    color: #17ba00;
+    margin: 80px 0;
 }
 
 .onas-wrapper .stripe {
     width: 100px;
     height: 2px;
-    background-color: limegreen;
+    background-color: #17ba00;
     margin: 30px auto;
 }
 
@@ -161,12 +162,14 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 0 0 80px 0;
 }
 
 .owner {
     width: 48%;
-    height: 400px;
-    background-color: #f2f2f2;
+    height: 350px;
+    margin: 0;
+    background-color: #fafafa;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -174,8 +177,8 @@ a {
 
 .owner-image {
     width: 150px;
-    height: 50px;
-    background-color: black;
+    height: auto;
+    margin: 20px 10px;
 }
 
 .about-owner {
@@ -183,7 +186,7 @@ a {
 }
 
 .about-owner h4 {
-    color: limegreen;
+    color: #17ba00;
     font: normal 300 20px/25px 'Roboto', sans-serif;
     margin: 0;
 }
@@ -198,3 +201,87 @@ a {
 
 
 /* Icons section */
+
+.offer-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+}
+
+.offer-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer-icon {
+    margin: 100px 0;
+}
+
+.offer-icon .icon-image {
+    width: 100px;
+    height: 100px;
+}
+
+.offer-icon figcaption {
+    font: normal bold 20px/1.5 'Roboto', sans-serif;
+}
+
+
+/* Offer items */
+
+.offer-items-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.offer-items-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.offer-item-description {
+    width: 50%;
+    margin: 0;
+    background-color: #fff;
+}
+
+.offer-item-name {
+    font: normal 40px/1.5 'Roboto', sans-serif;
+    color: #17ba00;
+    margin: 30px 0;
+}
+
+.offer-item-description .stripe {
+    width: 150px;
+    height: 1px;
+    background-color: #17ba00;
+    margin: 0 0 30px;
+}
+
+.offer-item-about {
+    font: normal 300 14px/1.5 'Roboto', sans-serif;
+    color: #6d6e71;
+}
+
+.offer-item-image {
+    width: 50%;
+    height: 400px;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#psycholog .offer-item-image {
+    background-image: url(../assets/images/psychologia.jpg);
+}
+
+#biofeedback .offer-item-image {
+    background-image: url(../assets/images/umysł.jpg);
+}
+
+#bowen .offer-item-image {
+    background-image: url(../assets/images/technikaBowena.jpg);
+}

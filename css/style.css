@@ -115,6 +115,15 @@ a {
     text-align: center;
     color: white;
     margin: 0 20px;
+    transition: all .3s ease-in-out;
+}
+
+.oferta-link:hover {
+    cursor: pointer;
+    background: none;
+    color: #17ba00;
+    border: 1px solid #17ba00;
+    transition: all .3s ease-in-out;
 }
 
 .onas-link {
@@ -124,6 +133,13 @@ a {
     border: 1px solid black;
     border-radius: 20px;
     text-align: center;
+    transition: all .3s ease;
+}
+
+.onas-link:hover {
+    color: #17ba00;
+    border-color: #17ba00;
+    transition: all .3s ease;
 }
 
 
@@ -215,12 +231,17 @@ a {
 }
 
 .offer-icon {
-    margin: 100px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
 }
 
 .offer-icon .icon-image {
     width: 100px;
     height: 100px;
+    margin: 10px auto;
 }
 
 .offer-icon figcaption {
@@ -245,17 +266,19 @@ a {
 .offer-item-description {
     width: 50%;
     margin: 0;
+    padding: 20px 50px;
+    box-sizing: border-box;
     background-color: #fff;
 }
 
 .offer-item-name {
-    font: normal 40px/1.5 'Roboto', sans-serif;
+    font: normal 300 40px/1.5 'Roboto', sans-serif;
     color: #17ba00;
-    margin: 30px 0;
+    margin: 0 0 30px 0;
 }
 
 .offer-item-description .stripe {
-    width: 150px;
+    width: 50px;
     height: 1px;
     background-color: #17ba00;
     margin: 0 0 30px;
@@ -264,11 +287,41 @@ a {
 .offer-item-about {
     font: normal 300 14px/1.5 'Roboto', sans-serif;
     color: #6d6e71;
+    margin: 20px 0;
+}
+
+.offer-item-button {
+    padding: 10px 15px;
+    margin: 0 15px 0 0;
+    border: 1px solid #17ba00;
+    border-radius: 20px;
+    background-color: #17ba00;
+    color: #fff;
+}
+
+.offer-item-button:hover {
+    background: none;
+    color: #17ba00;
+    cursor: pointer;
+}
+
+.offer-item-button-o {
+    padding: 10px 15px;
+    border: 1px solid #404041;
+    border-radius: 20px;
+    background: none;
+    color: #404041;
+}
+
+.offer-item-button-o:hover {
+    background-color: #404041;
+    color: white;
+    cursor: pointer;
 }
 
 .offer-item-image {
     width: 50%;
-    height: 400px;
+    height: 450px;
     margin: 0;
     background-size: cover;
     background-position: center;
@@ -284,4 +337,184 @@ a {
 
 #bowen .offer-item-image {
     background-image: url(../assets/images/technikaBowena.jpg);
+}
+
+
+/* Trainings */
+
+.trainings-wrapper {
+    background-color: #f2f2f2;
+    padding: 50px 0 50px 0;
+}
+
+.trainings-wrapper .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.trainings-title {
+    font: normal 300 40px/1.5 'Roboto', sans-serif;
+    color: #17ba00;
+    margin: 0 0 15px;
+}
+
+.trainings-wrapper .stripe {
+    width: 60px;
+    height: 1px;
+    background-color: #17ba00;
+    margin: 0 0 15px;
+}
+
+.about-trainings {
+    width: 100%;
+    height: 200px;
+    font: normal 300 14px/1.5 'Roboto', sans-serif;
+    color: #404041;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.about-trainings ul {
+    margin: 30px 0;
+}
+
+.trainings-description {
+    font: normal 300 20px/1.5 'Roboto', sans-serif;
+    color: #17ba00;
+    margin: 20px 0;
+}
+
+
+/* Pricings */
+
+.pricing-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.pricing-wrapper .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-wrapper .section-title {
+    font: normal 300 40px/1.5 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.pricing-wrapper .stripe {
+    width: 60px;
+    height: 1px;
+    background-color: #17ba00;
+    margin: 20px 0 30px;
+}
+
+.pricing-wrapper .section-description {
+    font: normal 300 24px/1.5 'Roboto', sans-serif;
+    color: #404041;
+    margin: 0 0 10px;
+}
+
+.offers-pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.offer-pricing {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border: 1px solid #404041;
+    margin: 0 30px;
+}
+
+.offer-pricing h5 {
+    font: normal bold 14px/1.5 'Roboto', sans-serif;
+    color: #17ba00;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 20px 0;
+}
+
+.offers-pricing table {
+    width: 100%;
+    margin: 0;
+    padding: 30px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #404041;
+}
+
+.trainings-pricing {
+    font: normal 300 20px/1.5 'Roboto', sans-serif;
+    color: #17ba00;
+    margin: 20px 0;
+}
+
+
+/* Feedbacks */
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .owner,
+.social-networks {
+    display: block;
+    width: 300px;
+    height: 150px;
+    background: none;
+}
+
+.owner .name,
+.social-networks .name {
+    font-size: 24px;
+    line-height: 1.3;
+    color: #17ba00;
+    margin: 0;
+}
+
+.name small {
+    display: block;
+    font-size: 0.6em;
+    font-weight: 300;
+    color: #404041;
+    margin: 8px 0;
+}
+
+footer .owner .stripe {
+    width: 60px;
+    height: 1px;
+    margin: 0;
+    background-color: #404041;
+}
+
+.contact-info {
+    font: normal 300 14px/1.3 'Roboto', sans-serif;
+    color: #404041;
 }

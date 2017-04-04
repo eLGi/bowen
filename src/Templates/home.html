@@ -242,7 +242,7 @@
     <div class="white-overlay">
         <div class="container">
             <div class="feedbacks">
-                <div ng-repeat="feedback in feedbacks" class="feedback">
+                <div ng-repeat="feedback in feedbacks" id="feedback{{feedback.id}}" class="feedback">
                     <p class="author">{{feedback.author}}</p>
                     <p class="excerpt">{{feedback.excerpt}}</p>
                     <a ng-href="#/feedback?id={{feedback.id}}" class="read-more">
@@ -251,7 +251,7 @@
                 </div>
             </div>
             <div class="controls">
-                <div ng-repeat="feedback in feedbacks" class="dot"></div>
+                <div ng-repeat="feedback in feedbacks" id="dot{{feedback.id}}" class="dot"></div>
             </div>
         </div>
     </div>

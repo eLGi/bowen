@@ -1,3 +1,3 @@
-(function() {
+var slider = function(container) {
 
-})();
+};

@@ -4,8 +4,12 @@ bowen.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
     $locationProvider.hashPrefix('');
     $routeProvider
         .when('/', {
-            templateUrl: 'src/Templates/home.html',
-            controller: 'HomeController'
+            templateUrl: '/src/Templates/Home.html',
+            controller: 'MainController'
+        })
+        .when('/feedback', {
+            templateUrl: '/src/Templates/feedback.html',
+            controller: 'FeedbackController'
         })
         .otherwise({
             redirectTo: '/'

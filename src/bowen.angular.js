@@ -5,7 +5,7 @@ bowen.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
     $routeProvider
         .when('/', {
             templateUrl: '/src/Templates/Home.html',
-            controller: 'MainController'
+            controller: 'HomeController'
         })
         .when('/feedback', {
             templateUrl: '/src/Templates/feedback.html',

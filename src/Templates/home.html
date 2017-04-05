@@ -241,17 +241,14 @@
 <section class="feedbacks-wrapper">
     <div class="white-overlay">
         <div class="container">
-            <div class="feedbacks">
-                <div ng-repeat="feedback in feedbacks" id="feedback{{feedback.id}}" class="feedback">
+            <div id="feedbacksContainer" class="feedbacks">
+                <div ng-repeat="feedback in feedbacks" id="feedback{{feedback.id}}" data-slide-id="{{feedback.id}}" class="feedback">
                     <p class="author">{{feedback.author}}</p>
                     <p class="excerpt">{{feedback.excerpt}}</p>
                     <a ng-href="#/feedback?id={{feedback.id}}" class="read-more">
                         Czytaj całość
                     </a>
                 </div>
-            </div>
-            <div class="controls">
-                <div ng-repeat="feedback in feedbacks" id="dot{{feedback.id}}" class="dot"></div>
             </div>
         </div>
     </div>

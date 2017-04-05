@@ -526,6 +526,12 @@ a {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    transition: margin-left .5s ease;
+}
+
+.feedback.slided {
+    margin-left: -100%;
+    transition: margin-left .5s ease;
 }
 
 .feedback .author {

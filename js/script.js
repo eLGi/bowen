@@ -1,10 +1,12 @@
-var feedbackSlider = function feedbackSlider(container) {
+var slideslider = function slideslider(container, options) {
     var self = this;
-    self.feedbacks = container.children;
+    self.slides = container.children;
     self.parent = container.parentElement;
-    self.currentSlide = self.feedbacks[0];
-    self.nextSlide = self.feedbacks[1];
+    self.currentSlide = self.slides[0];
+    self.nextSlide = self.slides[1];
     self.dots = null;
+    self.autoRunIntervalObject = null;
+    self.autoRunIntervalTime = options.interval || 3000;
     //Methods
     self.init = function init() {
         self.initDots();
@@ -13,9 +15,8 @@ var feedbackSlider = function feedbackSlider(container) {
     self.initDots = function initDots() {
         var dotsContainer = document.createElement('div');
         dotsContainer.className = 'controls';
-        for (let i = 0, x = self.feedbacks.length; i < x; i++) {
-            let dot = self.createDotElement(self.feedbacks[i].id);
-            dot.addEventListener('click', self.slideTo);
+        for (let i = 0, x = self.slides.length; i < x; i++) {
+            let dot = self.createDotElement(self.slides[i].id);
             dotsContainer.appendChild(dot);
         }
         self.parent.appendChild(dotsContainer);
@@ -23,32 +24,35 @@ var feedbackSlider = function feedbackSlider(container) {
         self.dots[0].classList.add('active');
     };
     self.initAutoRun = function initAutoRun() {
-        setInterval(function() {
+        self.autoRunIntervalObject = setInterval(function() {
             self.slideNext();
         }, 3000);
     };
+    self.stopAutoRun = function stopAutoRun() {
+        clearInterval(self.autoRunIntervalObject)
+    }
     self.slideTo = function slideTo() {
         var clickedDot = this,
             slideNumber = clickedDot.getAttribute('data-slide-id'),
-            targetSlide = self.feedbacks[slideNumber],
+            targetSlide = self.slides[slideNumber],
             currentSlideId = self.currentSlide.getAttribute('data-slide-id'),
             targetSlideId = targetSlide.getAttribute('data-slide-id');
         if (self.currentSlide === targetSlide) {
             console.log('Can\'t slide to the same slide.');
         } else if (currentSlideId < targetSlideId) {
             for (let j = currentSlideId; j < targetSlideId; j++) {
-                self.feedbacks[j].classList.add('slided');
+                self.slides[j].classList.add('slided');
             }
         } else {
             for (let j = currentSlideId; j >= targetSlideId; j--) {
-                self.feedbacks[j].classList.remove('slided');
+                self.slides[j].classList.remove('slided');
             }
         }
         self.deactivateDots();
         clickedDot.classList.add('active');
-        self.currentSlide = self.feedbacks[targetSlideId];
-        let nextSlideId = targetSlideId + 1 >= self.feedbacks.length ? 0 : Number(targetSlideId) + 1;
-        self.nextSlide = self.feedbacks[nextSlideId];
+        self.currentSlide = self.slides[targetSlideId];
+        let nextSlideId = targetSlideId + 1 >= self.slides.length ? 0 : Number(targetSlideId) + 1;
+        self.nextSlide = self.slides[nextSlideId];
         console.log(nextSlideId, self.currentSlide, self.nextSlide);
     };
     self.slideNext = function slideNext() {
@@ -57,16 +61,16 @@ var feedbackSlider = function feedbackSlider(container) {
         self.dots[currensSlideId].classList.remove('active');
         self.dots[nextSlideId].classList.add('active');
         if (nextSlideId === 0) {
-            for (let i = 0, x = self.feedbacks.length; i < x; i++) {
-                self.feedbacks[i].classList.remove('slided');
+            for (let i = 0, x = self.slides.length; i < x; i++) {
+                self.slides[i].classList.remove('slided');
             }
-            self.currentSlide = self.feedbacks[0];
-            self.nextSlide = self.feedbacks[1];
+            self.currentSlide = self.slides[0];
+            self.nextSlide = self.slides[1];
         } else {
             self.currentSlide.classList.add('slided');
             self.currentSlide = self.nextSlide;
-            let temp = nextSlideId + 1 >= self.feedbacks.length ? 0 : nextSlideId + 1;
-            self.nextSlide = self.feedbacks[temp];
+            let temp = nextSlideId + 1 >= self.slides.length ? 0 : nextSlideId + 1;
+            self.nextSlide = self.slides[temp];
             console.log(temp);
         }
     };
@@ -74,6 +78,7 @@ var feedbackSlider = function feedbackSlider(container) {
         let dot = document.createElement('div');
         dot.className = 'dot';
         dot.setAttribute('data-slide-id', slideId);
+        dot.addEventListener('click', self.slideTo);
         return dot;
     }
     self.deactivateDots = function deactivateDots() {

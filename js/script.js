@@ -1,4 +1,4 @@
-var slideslider = function slideslider(container, options) {
+var slider = function slideslider(container, options) {
     var self = this;
     self.slides = container.children;
     self.parent = container.parentElement;
@@ -6,7 +6,7 @@ var slideslider = function slideslider(container, options) {
     self.nextSlide = self.slides[1];
     self.dots = null;
     self.autoRunIntervalObject = null;
-    self.autoRunIntervalTime = options.interval || 3000;
+    self.autoRunIntervalTime = 3000;
     //Methods
     self.init = function init() {
         self.initDots();
@@ -90,3 +90,15 @@ var slideslider = function slideslider(container, options) {
         init: self.init,
     };
 };
+
+$('a[href^="#/#"]').bind('click.smoothscroll', function(e) {
+    e.preventDefault();
+    var target = this.hash,
+        $target = $(target);
+
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top - 40
+    }, 900, 'swing', function() {
+        window.location.hash = target;
+    });
+});

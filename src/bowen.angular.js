@@ -1,4 +1,4 @@
-var bowen = angular.module('bowen', ['ngRoute', 'ngSanitize']);
+var bowen = angular.module('bowen', ['ngRoute', 'ngSanitize', 'duScroll']);
 
 bowen.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');

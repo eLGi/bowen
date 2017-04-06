@@ -254,26 +254,63 @@ a {
 }
 
 
-/* Offer items */
+/* Oferty */
 
-.offer-items-wrapper {
+.psycholog-wrapper,
+.biofeedback-wrapper,
+.bowen-wrapper {
     width: 100%;
-    height: auto;
-}
-
-.offer-items-wrapper .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
 
-.offer-item-description {
+.psycholog-wrapper>div,
+.biofeedback-wrapper>div,
+.bowen-wrapper>div {
     width: 50%;
-    margin: 0;
-    padding: 20px 50px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    background-color: #fff;
+    padding: 80px;
+}
+
+.psycholog-description {
+    text-align: left;
+}
+
+.psycholog-image {
+    background-image: url(../assets/images/backgrounds/psychologia.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: flex-end;
+}
+
+.biofeedback-description {
+    text-align: left;
+}
+
+.biofeedback-image {
+    background-image: url(../assets/images/backgrounds/umysł.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: flex-end;
+}
+
+.bowen-description {
+    text-align: left;
+}
+
+.bowen-image {
+    background-image: url(../assets/images/backgrounds/technikaBowena.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: flex-end;
 }
 
 .offer-item-name {
@@ -338,18 +375,6 @@ a {
     margin: 0;
     background-size: cover;
     background-position: center;
-}
-
-#psycholog .offer-item-image {
-    background-image: url(../assets/images/backgrounds/psychologia.jpg);
-}
-
-#biofeedback .offer-item-image {
-    background-image: url(../assets/images/backgrounds/umysł.jpg);
-}
-
-#bowen .offer-item-image {
-    background-image: url(../assets/images/backgrounds/technikaBowena.jpg);
 }
 
 

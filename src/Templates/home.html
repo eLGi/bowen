@@ -3,27 +3,27 @@
         <img src="assets/images/logo.svg" class="brand" />
         <ul class="menu-list">
             <li class="menu-item">
-                <a href="#naviWrapper">
+                <a href="#naviWrapper" du-smooth-scroll du-scrollspy> 
                         Start
                     </a>
             </li>
             <li class="menu-item">
-                <a href="#oNas">
+                <a href="#oNas" du-smooth-scroll du-scrollspy>
                         O NAS
                     </a>
             </li>
             <li class="menu-item">
-                <a href="#oferta">
+                <a href="#oferta" du-smooth-scroll du-scrollspy>
                         OFERTA
                     </a>
             </li>
             <li class="menu-item">
-                <a href="#cennik">
+                <a href="#cennik" du-smooth-scroll du-scrollspy>
                         CENNIK
                     </a>
             </li>
             <li class="menu-item">
-                <a href="#kontakt">
+                <a href="#kontakt" du-smooth-scroll du-scrollspy>
                         KONTAKT
                     </a>
             </li>
@@ -37,10 +37,10 @@
             Monika Świerczek-Fic i Tomasz Fic
         </p>
         <div class="links-wrapper">
-            <a href="#oferta" class="oferta-link">
+            <a href="#oferta" du-smooth-scroll du-scrollspy class="oferta-link">
                 Nasza oferta
             </a>
-            <a href="#oNas" class="onas-link">
+            <a href="#oNas" du-smooth-scroll du-scrollspy class="onas-link">
                 Kim jesteśmy?
             </a>
         </div>
@@ -73,7 +73,7 @@
         </div>
     </div>
 </section>
-<section class="offer-wrapper">
+<section id="oferta" class="offer-wrapper">
     <div class="container">
         <figure class="offer-icon">
             <img src="assets/images/icons/person.svg" class="icon-image" />
@@ -93,9 +93,9 @@
         </figure>
     </div>
 </section>
-<section class="offer-items-wrapper">
-    <div id="psycholog" class="container">
-        <div class="offer-item-description">
+<section class="psycholog-wrapper">
+    <div class="description-container">
+        <div class="psycholog-description">
             <h3 class="offer-item-name">Psycholog</h3>
             <div class="stripe"></div>
             <div class="offer-item-about">
@@ -111,11 +111,14 @@
             </div>
             <button class="offer-item-button">Zobacz cennik</button>
         </div>
-        <div class="offer-item-image"></div>
     </div>
-    <div id="biofeedback" class="container">
-        <div class="offer-item-image"></div>
-        <div class="offer-item-description">
+    <div id="psycholog" class="psycholog-image"></div>
+</section>
+<section class="biofeedback-wrapper">
+    <div class="biofeedback-image"></div>
+    <div id="biofeedback" class="biofeedback-container">
+        <div class="biofeedback-image"></div>
+        <div class="biofeedback-description">
             <h3 class="offer-item-name">Biofeedback</h3>
             <div class="stripe"></div>
             <div class="offer-item-about">EEG Biofeedback to stosunkowo nowa, skuteczna metoda terapeutyczna zwiększająca możliwości funckjonowania mózgu. Metoda EEG Biofeedback jest metodą klasyczną, używaną szeroko, jako metoda nieinwazyjna, bez skutków ubocznych. Polega na nauczeniu
@@ -124,8 +127,10 @@
             <button class="offer-item-button-o">Dowiedz się więcej</button>
         </div>
     </div>
-    <div id="bowen" class="container">
-        <div class="offer-item-description">
+</section>
+<section class="bowen-wrapper">
+    <div id="bowen" class="bowen-container">
+        <div class="bowen-description">
             <h3 class="offer-item-name">Technika Bowena</h3>
             <div class="stripe"></div>
             <div class="offer-item-about">Technika Bowena jest delikatną, głęboko relaksującą, nieinwazyjną i bardzo bezpieczną terapią, kóra wspomaga organizm w osiągnięciu naturalnej równowagi i uzdrowieniu. Skuteczna w przypadku konkretnego bólu, jednocześnie oddziałuje na cały
@@ -133,8 +138,8 @@
             <button class="offer-item-button">Zobacz cennik</button>
             <button class="offer-item-button-o">Dowiedz się więcej</button>
         </div>
-        <div class="offer-item-image"></div>
     </div>
+    <div class="bowen-image"></div>
 </section>
 <section class="trainings-wrapper">
     <div class="white-overlay">
@@ -172,7 +177,7 @@
         </div>
     </div>
 </section>
-<section class="pricing-wrapper">
+<section id="cennik" class="pricing-wrapper">
     <div class="container">
         <h1 class="section-title">
             Cennik usług

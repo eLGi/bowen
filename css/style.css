@@ -183,6 +183,7 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0 0 80px 0;
 }
 
@@ -218,6 +219,13 @@ a {
 
 .about-owner p {
     font: normal 300 15px/1.5 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .owner {
+        width: 100%;
+        margin: 20px 0;
+    }
 }
 
 
@@ -269,6 +277,7 @@ a {
 .biofeedback-wrapper>div,
 .bowen-wrapper>div {
     width: 50%;
+    max-width: 823px;
     height: 550px;
     display: flex;
     justify-content: center;
@@ -332,7 +341,10 @@ a {
     margin: 20px 0;
 }
 
-.offer-item-button {
+.offer-item-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 140px;
     height: 40px;
     margin: 0 15px 0 0;
@@ -343,7 +355,7 @@ a {
     transition: all .6s ease;
 }
 
-.offer-item-button:hover {
+.offer-item-link:hover {
     background: none;
     color: #17ba00;
     cursor: pointer;
@@ -352,8 +364,11 @@ a {
     transition: all .6s ease;
 }
 
-.offer-item-button-o {
-    width: 140px;
+.offer-item-link-o {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
     height: 40px;
     border: 1px solid #404041;
     border-radius: 20px;
@@ -362,7 +377,7 @@ a {
     transition: all .6s ease;
 }
 
-.offer-item-button-o:hover {
+.offer-item-link-o:hover {
     color: #18ba00;
     border-color: #18ba00;
     cursor: pointer;
@@ -502,7 +517,7 @@ a {
 }
 
 .offer-pricing td {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .offers-pricing td:nth-child(odd) {

@@ -8,11 +8,102 @@
 
     <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div ng-view></div>
+    <section id="pageContents" ng-view></section>
+    <section id="cennik" class="pricing-wrapper">
+        <div class="container">
+            <h1 class="section-title">
+                Cennik usług
+            </h1>
+            <div class="stripe"></div>
+            <h4 class="section-description">
+                Wizyty prosimy umawiać telefonicznie
+            </h4>
+            <div class="offers-pricing">
+                <div class="offer-pricing">
+                    <h5>Pomoc psychologiczna</h5>
+                    <table>
+                        <tr>
+                            <td>konsultacje, wsparcie psychologiczne (1h)</td>
+                            <td>80zł</td>
+                        </tr>
+                        <tr>
+                            <td>wydanie opinii na prośbę klienta</td>
+                            <td>50zł</td>
+                        </tr>
+                        <tr>
+                            <td>treningi pamięci - cykl 10 spotkań po 1h</td>
+                            <td>650zł</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="offer-pricing">
+                    <h5>Sesja Biofeedback</h5>
+                    <table>
+                        <tr>
+                            <td>Diagnoza</td>
+                            <td>70zł</td>
+                        </tr>
+                        <tr>
+                            <td>Terapia - 1 sesja</td>
+                            <td>60zł</td>
+                        </tr>
+                        <tr>
+                            <td>Terapia - 10 sesji</td>
+                            <td>500zł</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="offer-pricing">
+                    <h5>Sesja Techniki Bowena</h5>
+                    <table>
+                        <tr>
+                            <td>osoba dorosła</td>
+                            <td>50zł</td>
+                        </tr>
+                        <tr>
+                            <td>osoba do 18 r.ż.</td>
+                            <td>40zł</td>
+                        </tr>
+                        <tr>
+                            <td>niemowlę lub noworodek</td>
+                            <td>20zł</td>
+                        </tr>
+                        <tr>
+                            <td>2 osoby jednocześnie</td>
+                            <td>80zł</td>
+                        </tr>
+                        <tr>
+                            <td>dojazd do pacjenta (wizyta domowa)</td>
+                            <td>20zł</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="trainings-pricing">
+                W przypadku szkoleń i prelekcji ceny uzgadniamy indywidualnie.
+            </p>
+        </div>
+    </section>
+    <section class="feedbacks-wrapper">
+        <div class="white-overlay">
+            <div class="container">
+                <div id="feedbacksContainer" class="feedbacks">
+                    <div ng-repeat="feedback in feedbacks" id="feedback{{feedback.id}}" data-slide-id="{{feedback.id}}" class="feedback">
+                        <p class="author">{{feedback.author}}</p>
+                        <p class="excerpt">{{feedback.excerpt}}</p>
+                        <a ng-href="#/feedback?id={{feedback.id}}" class="read-more">
+                        Czytaj całość
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer id="kontakt">
         <div class="container">
             <div class="owner">
@@ -43,6 +134,9 @@
             </div>
         </div>
     </footer>
+    <script>
+        var url = window.location.href.split('#')[0];
+    </script>
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Feedbacks -->
@@ -59,6 +153,8 @@
     <script src="src/Controllers/MainController.js"></script>
     <script src="src/Controllers/HomeController.js"></script>
     <script src="src/Controllers/FeedbackController.js"></script>
+    <!-- Angular directives -->
+    <script src="src/Directives/Menu.js"></script>
 </body>
 
 </html>

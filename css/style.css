@@ -51,6 +51,13 @@ a {
     background-attachment: scroll;
 }
 
+.navigation-wrapper.feedback-menu {
+    background: #fff;
+}
+
+
+/* Container of main navigation list */
+
 .navigation-wrapper .container:not(.title-wrapper) {
     display: flex;
     justify-content: space-between;
@@ -83,9 +90,57 @@ a {
     color: #fff;
 }
 
+.feedback-menu .menu-item {
+    color: #ccc;
+}
+
 .menu-item:hover {
     color: #18ba00;
 }
+
+.toggle-mobile {
+    display: none;
+    background: none;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navigation-wrapper .container:not(.title-wrapper) {
+        display: block;
+        height: auto;
+        min-height: 75px;
+    }
+    .menu-list {
+        display: none;
+        padding: 0;
+    }
+    .menu-list.on {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+    .toggle-mobile {
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+
+/* Title wrapper */
 
 .title-wrapper .site-title {
     font: normal 300 70px/84px 'Roboto', sans-serif;
@@ -221,7 +276,7 @@ a {
     font: normal 300 15px/1.5 'Roboto', sans-serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1170px) {
     .owner {
         width: 100%;
         margin: 20px 0;
@@ -261,6 +316,15 @@ a {
     font: normal 300 26px/31px 'Roboto', sans-serif;
 }
 
+@media (max-width: 768px) {
+    .offer-wrapper .container {
+        flex-wrap: wrap;
+    }
+    .offer-icon {
+        width: 100%;
+    }
+}
+
 
 /* Oferty */
 
@@ -277,45 +341,39 @@ a {
 .biofeedback-wrapper>div,
 .bowen-wrapper>div {
     width: 50%;
-    max-width: 823px;
-    height: 550px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 80px;
 }
 
-.psycholog-description {
+.psycholog-description,
+.biofeedback-description,
+.bowen-description {
     text-align: left;
+    min-width: 500px;
+    width: 60%;
 }
 
 .psycholog-image {
-    background-image: url(../assets/images/backgrounds/psychologia.jpg);
+    background-image: url(../assets/images/backgrounds/psychologia.png);
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
     align-self: flex-end;
-}
-
-.biofeedback-description {
-    text-align: left;
 }
 
 .biofeedback-image {
-    background-image: url(../assets/images/backgrounds/umysł.jpg);
+    background-image: url(../assets/images/backgrounds/umysł.png);
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
     align-self: flex-end;
 }
 
-.bowen-description {
-    text-align: left;
-}
-
 .bowen-image {
-    background-image: url(../assets/images/backgrounds/technikaBowena.jpg);
+    background-image: url(../assets/images/backgrounds/technikaBowena.png);
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -390,6 +448,18 @@ a {
     margin: 0;
     background-size: cover;
     background-position: center;
+}
+
+@media (min-width: 1795px) {
+    .psycholog-image {
+        background-size: 100% auto;
+    }
+    .biofeedback-image {
+        background-size: 100% auto;
+    }
+    .bowen-image {
+        background-size: 100% auto;
+    }
 }
 
 

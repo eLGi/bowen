@@ -1,0 +1,16 @@
+/* Menu wrapper */
+
+.navigation-wrapper {
+    height: 87px;
+}
+
+.navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-item {
+    color: #404041;
+}

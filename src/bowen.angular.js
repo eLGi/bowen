@@ -11,6 +11,14 @@ bowen.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
             templateUrl: url + '/src/Templates/feedback.html',
             controller: 'FeedbackController'
         })
+        .when('/biofeedback', {
+            templateUrl: url + '/src/Templates/biofeedback.html',
+            controller: 'BiofeedbackController'
+        })
+        .when('/bowen', {
+            templateUrl: url + '/src/Templates/bowen.html',
+            controller: 'BowenController'
+        })
         .otherwise({
             redirectTo: '/'
         })

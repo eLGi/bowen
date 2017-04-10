@@ -10,10 +10,6 @@
     background-attachment: scroll;
 }
 
-.navigation-wrapper.feedback-menu {
-    background: #fff;
-}
-
 
 /* Container of main navigation list */
 
@@ -128,7 +124,6 @@
 .onas-wrapper .stripe {
     width: 100px;
     height: 2px;
-    background-color: #17ba00;
     margin: 30px auto;
 }
 
@@ -310,8 +305,6 @@
 
 .offer-item-description .stripe {
     width: 60px;
-    height: 2px;
-    background-color: #17ba00;
     margin: 0 0 30px;
 }
 
@@ -457,13 +450,6 @@
 .trainings-title {
     font: normal 300 52px/62px 'Roboto', sans-serif;
     color: #17ba00;
-    margin: 0 0 15px;
-}
-
-.trainings-wrapper .stripe {
-    width: 60px;
-    height: 1px;
-    background-color: #17ba00;
     margin: 0 0 15px;
 }
 

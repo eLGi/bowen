@@ -254,9 +254,21 @@
     align-items: center;
 }
 
+.preparation-wrapper .section-title {
+    text-align: center;
+}
+
 .preparation-wrapper .stripe {
     height: 2px;
-    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .preparation-wrapper .section-title {
+        text-align: left;
+    }
+    .preparation-wrapper .stripe {
+        margin-right: auto;
+    }
 }
 
 

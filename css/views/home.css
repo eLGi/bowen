@@ -207,12 +207,16 @@
     align-items: center;
 }
 
+.offer-wrapper .container>a {
+    display: block;
+    margin: 100px auto;
+}
+
 .offer-icon {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    margin: 100px auto;
 }
 
 .offer-icon .icon-image {

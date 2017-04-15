@@ -53,7 +53,6 @@ var slider = function slideslider(container, options) {
         self.currentSlide = self.slides[targetSlideId];
         let nextSlideId = targetSlideId + 1 >= self.slides.length ? 0 : Number(targetSlideId) + 1;
         self.nextSlide = self.slides[nextSlideId];
-        console.log(nextSlideId, self.currentSlide, self.nextSlide);
     };
     self.slideNext = function slideNext() {
         var currensSlideId = Number(self.currentSlide.getAttribute('data-slide-id')),
@@ -71,7 +70,6 @@ var slider = function slideslider(container, options) {
             self.currentSlide = self.nextSlide;
             let temp = nextSlideId + 1 >= self.slides.length ? 0 : nextSlideId + 1;
             self.nextSlide = self.slides[temp];
-            console.log(temp);
         }
     };
     self.createDotElement = function createDotElement(slideId) {

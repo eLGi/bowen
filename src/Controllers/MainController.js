@@ -7,9 +7,11 @@ bowen.controller('MainController', ['$scope', '$location', function($scope, $loc
     }, 20);
     //Methods
     $scope.toggleMobileMenu = function toggleMobileMenu() {
-        document.getElementsByClassName('menu-list')[0].classList.toggle('on');
+        console.log('Yay!');
+        document.getElementById('menuList').classList.toggle('on');
     }
     $scope.hideMenu = function hideMenu() {
-        document.getElementsByClassName('menu-list')[0].classList.remove('on');
+        console.log('Nay!');
+        document.getElementById('menuList').classList.remove('on');
     }
 }]);

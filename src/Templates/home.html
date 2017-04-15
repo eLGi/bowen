@@ -1,8 +1,8 @@
 <section id="naviWrapper" class="navigation-wrapper">
-    <div menu class="container"></div>
+    <div menu class="container" icon="icon" toggle-mobile-menu="toggleMobileMenu()" hideMobileMenu="hodeMobileMenu()"></div>
     <div class="container title-wrapper">
         <h1 class="site-title">
-            Profesjonalna fizjoterapia
+            Harmonia umysłu i ciała
         </h1>
         <p class="site-owners">
             Monika Świerczek-Fic i Tomasz Fic
@@ -46,25 +46,33 @@
 </section>
 <section id="oferta" class="offer-wrapper">
     <div class="container">
-        <figure class="offer-icon">
-            <img src="assets/images/icons/person.svg" class="icon-image" />
-            <figcaption>Psycholog</figcaption>
-        </figure>
-        <figure class="offer-icon">
-            <img src="assets/images/icons/brain.svg" class="icon-image" />
-            <figcaption>Biefeedback</figcaption>
-        </figure>
-        <figure class="offer-icon">
-            <img src="assets/images/icons/palm.svg" class="icon-image" />
-            <figcaption>Technika Bowena</figcap>
-        </figure>
-        <figure class="offer-icon">
-            <img src="assets/images/icons/pencil.svg" class="icon-image" />
-            <figcaption>Szkolenia i prelekcje</figcaption>
-        </figure>
+        <a href="#psychologWrapper" du-smooth-scroll du-scrollspy>
+            <figure class="offer-icon">
+                <img src="assets/images/icons/person.svg" class="icon-image" />
+                <figcaption>Psycholog</figcaption>
+            </figure>
+        </a>
+        <a href="#biofeedbackWrapper" du-smooth-scroll du-scrollspy>
+            <figure class="offer-icon">
+                <img src="assets/images/icons/brain.svg" class="icon-image" />
+                <figcaption>Biefeedback</figcaption>
+            </figure>
+        </a>
+        <a href="#bowenWrapper" du-smooth-scroll du-scrollspy>
+            <figure class="offer-icon">
+                <img src="assets/images/icons/palm.svg" class="icon-image" />
+                <figcaption>Technika Bowena</figcap>
+            </figure>
+        </a>
+        <a href="#trainingsWrapper" du-smooth-scroll du-scrollspy>
+            <figure class="offer-icon">
+                <img src="assets/images/icons/pencil.svg" class="icon-image" />
+                <figcaption>Szkolenia i prelekcje</figcaption>
+            </figure>
+        </a>
     </div>
 </section>
-<section class="psycholog-wrapper">
+<section id="psychologWrapper" class="psycholog-wrapper">
     <div class="description-container">
         <div class="psycholog-description">
             <h3 class="offer-item-name">Psycholog</h3>
@@ -85,7 +93,7 @@
     </div>
     <div id="psycholog" class="psycholog-image"></div>
 </section>
-<section class="biofeedback-wrapper">
+<section id="biofeedbackWrapper" class="biofeedback-wrapper">
     <div class="biofeedback-image"></div>
     <div id="biofeedback" class="biofeedback-container">
         <div class="biofeedback-description">
@@ -98,7 +106,7 @@
         </div>
     </div>
 </section>
-<section class="bowen-wrapper">
+<section id="bowenWrapper" class="bowen-wrapper">
     <div id="bowen" class="bowen-container">
         <div class="bowen-description">
             <h3 class="offer-item-name">Technika Bowena</h3>
@@ -111,7 +119,7 @@
     </div>
     <div class="bowen-image"></div>
 </section>
-<section class="trainings-wrapper">
+<section id="trainingsWrapper" class="trainings-wrapper">
     <div class="white-overlay">
         <div class="container">
             <h3 class="trainings-title">Szkolenia i prelekcje</h3>
@@ -139,10 +147,11 @@
                     <li>jak radzić sobie ze stresem</li>
                     <li>cyberdziecko</li>
                     <li>zjawisko przemocy</li>
+                    <li>i inne</li>
                 </ul>
             </div>
             <p class="trainings-description">
-                Tematy szkoleń również zgodnie z zapotrzebowaniami indywidualnymi klienta.
+                Tematyka szkoleń dostosowana do zapotrzebowań klienta.
             </p>
         </div>
     </div>

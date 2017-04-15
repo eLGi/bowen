@@ -43,6 +43,13 @@ a {
     .container {
         width: 100%;
     }
+    .section-title {
+        margin-right: auto;
+        text-align: left;
+    }
+    .stripe {
+        margin-right: auto;
+    }
 }
 
 
@@ -224,7 +231,8 @@ a {
 @media (max-width: 768px) {
     .pricing-wrapper .section-title {
         font-size: 40px;
-        line-height: 50px
+        line-height: 50px;
+        margin-right: auto;
     }
     .section-description {
         text-align: center;

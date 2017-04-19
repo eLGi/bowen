@@ -15,8 +15,6 @@
 </section>
 <section id="readMore" class="feedback-wrapper">
     <div class="container">
-        <p class="section-description">
-            {{feedback.feedback}}
-        </p>
+        <div class="section-description" ng-bind-html="feedback.feedback"></div>
     </div>
 </section>

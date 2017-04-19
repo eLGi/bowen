@@ -229,18 +229,18 @@
     font: normal 300 26px/31px 'Roboto', sans-serif;
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 1169px) {
     .offer-icon figcaption {
         font-size: 22px;
         line-height: 27px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .offer-wrapper .container {
         flex-wrap: wrap;
     }
-    .offer-icon {
+    .offer-wrapper .container>a {
         width: 100%;
         margin: 50px auto;
     }
@@ -392,6 +392,9 @@
 }
 
 @media (max-width: 768px) {
+    .bowen-wrapper {
+        padding: 0 0 15px 0;
+    }
     .psycholog-wrapper,
     .biofeedback-wrapper,
     .bowen-wrapper {

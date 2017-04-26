@@ -424,7 +424,7 @@
         order: 0;
     }
     .offer-item-name {
-        text-align: center;
+        text-align: left;
         margin: 10px 0;
     }
     .offer-item-link,
@@ -502,8 +502,8 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .trainings-title {
-        text-align: center;
+        align-self: flex-start;
     }
 }

@@ -228,11 +228,14 @@ a {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .pricing-wrapper .section-title {
         font-size: 40px;
         line-height: 50px;
         margin-right: auto;
+    }
+    .pricing-wrapper .stripe {
+        align-self: flex-start;
     }
     .section-description {
         text-align: center;

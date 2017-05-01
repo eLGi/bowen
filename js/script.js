@@ -12,7 +12,7 @@ var slider = function slideslider(container, options) {
     //#region Methods
     self.init = function init() {
         self.initDots();
-        if (slides.length > 1) {
+        if (self.slides.length > 1) {
             self.initAutoRun();
         } else {
             console.info('There is only one slide (or even less) it\'s pointless to any movement.');

@@ -1,4 +1,5 @@
 var slider = function slideslider(container, options) {
+    //#region properties
     var self = this;
     self.slides = container.children;
     self.parent = container.parentElement;
@@ -7,10 +8,15 @@ var slider = function slideslider(container, options) {
     self.dots = null;
     self.autoRunIntervalObject = null;
     self.autoRunIntervalTime = 3000;
-    //Methods
+    //#endregion
+    //#region Methods
     self.init = function init() {
         self.initDots();
-        self.initAutoRun();
+        if (slides.length > 1) {
+            self.initAutoRun();
+        } else {
+            console.info('There is only one slide (or even less) it\'s pointless to any movement.');
+        }
     };
     self.initDots = function initDots() {
         var dotsContainer = document.createElement('div');
@@ -87,4 +93,5 @@ var slider = function slideslider(container, options) {
     return {
         init: self.init,
     };
+    //#endregion
 };

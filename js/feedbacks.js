@@ -10,14 +10,4 @@ var feedbacks = [{
         '<p>Po zakończeniu całego cyklu rehabilitacyjnego zarówno łokieć, jak i bark wróciły praktycznie do stanu sprzed urazu, a efekt utrzymuje się do dnia dzisiejszego.</p>' +
         '<p>Uważam, że Pan Tomasz jest profesjonalistą w tym, co robi i zdecydowanie poleciłbym go osobom, które mają różne dolegliwości i tradycyjne metody się jak na razie nie sprawdziły.</p>' +
         '<p>W razie pytań, można kontaktować się pod mailem: <a href="mailto:bluefil@gmail.com">bluefil@gmail.com</a>',
-}, {
-    id: 1,
-    author: 'Karol Kowalski',
-    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididont ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt.',
-    feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididont ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididont ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt.',
-}, {
-    id: 2,
-    author: 'Grzegorz Leks',
-    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididont ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt.',
-    feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididont ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididont ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt.',
-}]
+}];
